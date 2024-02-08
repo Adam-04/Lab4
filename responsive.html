@@ -2,8 +2,8 @@
 =========================================================
 Name        : index.html
 Assignment  : Lab 4 Exercise B
-Author(s)   : Mahdi Ansari, William Arthur Philip Louis
-Submission  : May 21, 2030
+Author(s)   : Tri Dung Phan, Adam Sadowski
+Submission  : Feb 7, 2024
 Description : Responsive Layouts.
 =========================================================
 -->
@@ -18,23 +18,12 @@ Description : Responsive Layouts.
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- First, link the menu.css file here -->
+	<link rel="stylesheet" type="text/css" href="menu.css">
 
 	<style>	
 		/* Remove borders at the end, they have been add just for detecting positions of items*/	
 		div {
-			border: 1px dashed gray;	
-		}
-		.row{ 
-			border: 1px solid red;			
-		}
-		.large {
-			border: 1px solid blue;	
-		}
-		.medium {
-			border: 1px solid green;	
-		}
-		.small {
-			border: 1px solid yellow;	
+			border: none;
 		}		
 	</style>
 
@@ -47,37 +36,91 @@ Description : Responsive Layouts.
         .footer { position: fixed; bottom: 0; width: 100%;}
         .news-item { padding: 10px; }
 		
-		.row { 
-			/*I need some CSS codes.*/		
+		.row {
+
+			
+			display: inline-table;
+
+			vertical-align: top;
+			
+			white-space: nowrap; 
+			
 		}
+			
 
 		.large, .medium, .small {
 			/*I need some CSS codes.*/
+			display: inline-block;
+			white-space: normal;
+			vertical-align: top;
 		}
 		
 		.gap {
 			/*I need some CSS codes.*/
+			margin-bottom: 100px;
 		}
 
 		@media screen and (min-width: 769px) {			
 			.large { 
-				/*I need some CSS codes.*/
+				width: 100%;
 			}
+
 			.medium { 
-				/*I need some CSS codes.*/
+				width: 70%;
+				
 			}
+
 			.small { 
-				/*I need some CSS codes.*/
-			 }
+				width: 30%;
+			}
 		}
 
         @media screen and (max-width: 768px) {
             /*I need some CSS codes.*/
-        }
+			.large{
+				width: 100%;
+			}
+			.medium{
+				width: 60%;
+			}
+			.small{
+				width: 40%;
+			}
+			.menu{
+				text-align: center;
+				width: 100%;
+			}
+			.main{
+				margin-left: 0;
+				
+			}
+			
+		}
+
 
         @media screen and (max-width: 480px) {
-			/*I need some CSS codes.*/
-        }
+    .large, .medium, .small {
+        width: 100%;
+		display: block;
+		
+    }
+
+    .menu {
+		width: 100%; /* Occupy the full width */
+    }
+
+    .main {
+        margin-left: 0; /* Remove left margin for main content */
+        width: 100%; /* Occupy the full width */
+    }
+
+    h1 {
+        font-size: 18px; /* Reduce font size for h1 headers */
+    }
+
+}
+
+
 
         
     </style>
